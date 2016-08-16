@@ -9,4 +9,4 @@
   tags: gearman
   service:
     name: gearman-job-server
-    state: restart
+    state: restarted
