@@ -47,6 +47,7 @@ Variables
 
 ```yaml
 production: no
+os: trusty
 
 db_name: openitcockpit
 db_user: oitc
