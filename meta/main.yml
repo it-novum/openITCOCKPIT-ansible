@@ -1,0 +1,18 @@
+galaxy_info:
+  author: Sascha Veres
+  description: "Ansible role which installs and configures openITCOCKPIT v3."
+  company: it-novum GmbH
+  license: MIT
+
+  min_ansible_version: 2.0
+
+  platforms:
+  - name: Ubuntu
+    versions:
+      - trusty
+
+  galaxy_tags:
+    - monitoring
+    - system
+
+dependencies: []
