@@ -30,7 +30,7 @@ Quickstart
     user_firstname: root
     user_surname: wheel
     user_email: root@example.com
-    user_password: oitcsuperpassword
+    user_password: oITCpw123
     phpnsta_user_name: phpnsta
     phpnsta_user_password: phpnstasuperpassword
 
@@ -61,17 +61,10 @@ senderaddress: root@example.com
 user_firstname: root
 user_surname: wheel
 user_email: root@example.com
-user_password: oitcsuperpassword
+user_password: oITCpw123
 
 phpnsta_user_name: phpnsta
 phpnsta_user_password: phpnstasuperpassword
-
-#wkhtmltopdf variables
-wk_os: trusty
-wk_arch: amd64
-wk_version: 0.12.3
-wk_version_major: 0.12
-
 ```
 
 Take a look into `defaults/main.yml` to get an overview of all configuration parameters

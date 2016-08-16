@@ -5,13 +5,13 @@
   become: yes
   hostname:
     name: master
-  when: oitc.production
+  when: production
   register: production_mode
 
 - name: Make my directory tree readable
   become: yes
   file:
-    path: "{{ nginx.doc_root }}"
+    path: /usr/share/openitcockpit
     owner: www-data
     group: www-data
     mode: 0774
@@ -19,7 +19,7 @@
 
 - name: Ensure that Cache folder ist present and writeable
   file:
-    path: '{{ nginx.doc_root }}/app/tmp/'
+    path: /usr/share/openitcockpit/app/tmp/
     state: directory
     owner: www-data
     group: www-data
@@ -28,7 +28,7 @@
 
 - name: Ensure that Log-Cache folder ist present and writeable
   file:
-    path: '{{ nginx.doc_root }}/app/tmp/logs/'
+    path: /usr/share/openitcockpit/app/tmp/logs/
     state: directory
     owner: www-data
     group: www-data
@@ -38,7 +38,7 @@
 
 - name: Ensure error-log files are present and writeable
   file:
-    path: '{{ nginx.doc_root }}/app/tmp/logs/error.log'
+    path: /usr/share/openitcockpit/app/tmp/logs/error.log
     state: touch
     owner: www-data
     group: www-data
@@ -56,4 +56,4 @@
 - name: start setup wrapper
   become: yes
   command: /usr/share/openitcockpit/setup_wrapper.sh
-  when: (db_created.changed or production_mode.changed)
+  when: (setup_packages.changed or production_mode.changed)

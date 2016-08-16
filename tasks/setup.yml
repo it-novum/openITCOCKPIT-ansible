@@ -23,7 +23,7 @@
   become: yes
   template:
     src: openitcockpit.conf.j2
-    dest: /etc/dbconfig-common/openitcockpit.conf
+    dest: /etc/dbconfig-common/config
     owner: root
     group: root
     mode: 0600
@@ -34,8 +34,6 @@
     src: phpnsta_config.php.j2
     dest: /etc/dbconfig-common/phpnsta_config.php
 
-- include: debconf.yml
-
 - name: install naemon and dependancies
   become: yes
   apt:
@@ -43,11 +41,15 @@
     state: latest
     update_cache: yes
   with_items:
+    - expect
     - openitcockpit
     - openitcockpit-common
     - openitcockpit-naemon
     - openitcockpit-statusengine-naemon
     - openitcockpit-npcd
+    - openitcockpit-mysql
+    - openitcockpit-monitoring-plugins
+  register: setup_packages
 
 - name: set database config
   become: yes
@@ -56,6 +58,4 @@
     dest: /usr/share/openitcockpit/app/Config/database.php
     owner: www-data
     group: www-data
-    mode: 0600
-
-- include: wkhtmltopdf.yml
+    mode: 0600`

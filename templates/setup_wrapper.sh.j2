@@ -11,38 +11,38 @@ expect "> "
 send "y\n"
 
 expect "> "
-send "{{ oitc.user_firstname }}\n"
+send "{{ user_firstname }}\n"
 
 expect "> "
-send "{{ oitc.user_surname }}\n"
+send "{{ user_surname }}\n"
 
 expect "> "
-send "{{ oitc.user_email }}\n"
+send "{{ user_email }}\n"
 
 expect "> "
-send "{{ oitc.user_password }}\n"
+send "{{ user_password }}\n"
 
 expect "> "
-send "{{ oitc.user_password }}\n"
+send "{{ user_password }}\n"
 
 expect "> "
-send "y\n"
+send "Y\n"
 
 expect "> "
-send "{{ oitc.mailserver }}\n"
+send "{{ mailserver }}\n"
 
 expect "> "
-send "{{ oitc.senderaddress }}\n"
+send "{{ senderaddress }}\n"
 
 expect "> "
 send "{{ ansible_fqdn }}\n"
 
 expect "> "
-send "{{ oitc.smtpport }}\n"
+send "{{ smtpport }}\n"
 
 expect "> "
 send "\n"
-
+c
 expect "> "
 send "\n"
 
