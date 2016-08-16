@@ -56,4 +56,8 @@
 - name: start setup wrapper
   become: yes
   command: /usr/share/openitcockpit/setup_wrapper.sh
+  notify:
+    - restart gearman
   when: (setup_packages.changed or production_mode.changed)
+
+

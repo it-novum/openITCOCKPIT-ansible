@@ -43,7 +43,6 @@
   with_items:
     - expect
     - openitcockpit
-    - openitcockpit-common
     - openitcockpit-naemon
     - openitcockpit-statusengine-naemon
     - openitcockpit-npcd
@@ -58,4 +57,4 @@
     dest: /usr/share/openitcockpit/app/Config/database.php
     owner: www-data
     group: www-data
-    mode: 0600`
+    mode: 0600
