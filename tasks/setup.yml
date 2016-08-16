@@ -50,6 +50,15 @@
     - openitcockpit-monitoring-plugins
   register: setup_packages
 
+- name: fixed issue with gearman-job-server upstart
+  become: yes
+  template:
+    src: gearman-job-server.conf.j2
+    dest: /etc/init/gearman-job-server.conf
+    owner: root
+    group: root
+    mode: 0644
+
 - name: set database config
   become: yes
   template:
