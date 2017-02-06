@@ -40,7 +40,7 @@ Quickstart
 
 - Fetch this role with dependencies `ansible-galaxy install -p . it-novum.openITCOCKPIT-ansible`
 - Run the playbook with `ansible-playbook playbook.yml -i "127.0.0.1"`
-- Login to Graylog by opening `http://localhost` in your browser
+- Login to openITCOCKPIT by opening `http://localhost` in your browser
 
 Variables
 --------
