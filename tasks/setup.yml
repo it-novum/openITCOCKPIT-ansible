@@ -48,6 +48,7 @@
     - openitcockpit-npcd
     - openitcockpit-mysql
     - openitcockpit-monitoring-plugins
+    - openitcockpit-message
   register: setup_packages
 
 - name: fixed issue with gearman-job-server upstart
