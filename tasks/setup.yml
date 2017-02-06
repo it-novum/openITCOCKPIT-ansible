@@ -43,6 +43,7 @@
   with_items:
     - expect
     - openitcockpit
+    - openitcockpit-common
     - openitcockpit-naemon
     - openitcockpit-statusengine-naemon
     - openitcockpit-npcd
