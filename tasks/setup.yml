@@ -3,12 +3,12 @@
   become: yes
   apt_key:
     keyserver: 'hkp://keyserver.ubuntu.com'
-    id: A7D3EAFA
+    id: 1148DA8E
 
 - name: add openITCOCKPIT repository
   become: yes
   apt_repository:
-    repo: 'deb https://apt.open-itcockpit.com {{ os }} main'
+    repo: 'deb https://packages.openitcockpit.com/repositories/{{ os }} {{ os }} main'
     filename: openitcockpit
     state: present
     update_cache: yes

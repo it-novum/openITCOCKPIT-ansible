@@ -4,6 +4,7 @@ os: trusty
 
 db_name: openitcockpit
 db_user: oitc
+
 db_user_password: mysql_password
 db_root_password: root_password
 
